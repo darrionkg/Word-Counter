@@ -28,7 +28,7 @@ namespace WordCounter
     {
       int matches = 0;
       for(int i = 0; i < sentenceArray.Length; i++) {
-        if(sentenceArray[i].Contains(_word)) {
+        if(sentenceArray[i] == _word) {
           matches++;
         } else {
           continue;
@@ -40,7 +40,7 @@ namespace WordCounter
     public string Replace(string[] newSentenceArray)
     {
       for(int i = 0; i < newSentenceArray.Length; i++) {
-        if(newSentenceArray[i].Contains(_word)) {
+        if(newSentenceArray[i] == _word) {
           newSentenceArray[i] = _replacementWord;
         } else {
           continue;

@@ -47,7 +47,8 @@ namespace WordCounter.Tests
     [TestMethod]
     public void CheckForMatches_ChecksForMultipleWordMatches_int()
     {
-      string longSentence = "the cat Meatball met another cat and became best friends with the cat even though he was an ally cat, it didn't matter because he was a good cat friend";
+      // bug with comma in sentence
+      string longSentence = "the cat Meatball met another cat and became best friends with the cat even though he was an ally cat it didn't matter because he was a good cat friend";
       ReplaceWords testCase = new ReplaceWords("cat", longSentence, "dog");
       string[] sentenceArray = testCase.MakeSentenceArray();
       int numOfMatches = testCase.CheckForMatches(sentenceArray);
