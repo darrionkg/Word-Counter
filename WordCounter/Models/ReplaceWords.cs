@@ -30,15 +30,26 @@ namespace WordCounter
       for(int i = 0; i < sentenceArray.Length; i++) {
         if(sentenceArray[i].Contains(_word)) {
           matches++;
-        }
-        else {
+        } else {
           continue;
         }
       }
       return matches;
     }
 
-  
+    public string Replace(string[] newSentenceArray)
+    {
+      for(int i = 0; i < newSentenceArray.Length; i++) {
+        if(newSentenceArray[i].Contains(_word)) {
+          newSentenceArray[i] = _replacementWord;
+        } else {
+          continue;
+        }
+      }
+      string newSentenceString = string.Join(" ", newSentenceArray);
+      return newSentenceString;
     }
+
+
   }
 }

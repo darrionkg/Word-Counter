@@ -53,5 +53,17 @@ namespace WordCounter.Tests
       int numOfMatches = testCase.CheckForMatches(sentenceArray);
       Assert.AreEqual(numOfMatches, 5);
     }
+
+    [TestMethod]
+    public void Replace_ReplacesWordWithNewWord_string()
+    {
+      string sentenceToFix = "The cat barked at the cathedral";
+      string testFixedSentence = "The dog barked at the cathedral";
+      ReplaceWords testCase = new ReplaceWords("cat", sentenceToFix, "dog");
+      string[] sentenceArray = testCase.MakeSentenceArray();
+      string fixedSentence = testCase.Replace(sentenceArray);
+      Assert.AreEqual(testFixedSentence, fixedSentence);
+    }
+
   }
 }
