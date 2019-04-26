@@ -78,6 +78,17 @@ namespace WordCounter.Tests
       Assert.AreEqual(testFixedSentence, fixedSentence);
     }
 
+    [TestMethod]
+    public void SetIgnoreCaseTrue_IgnoresCasing_true()
+    {
+      string sentenceToFix = "ThE cAt BaRked at the CatHedral";
+      string testFixedSentence = "the dog barked at the cathedral";
+      ReplaceWords testCase = new ReplaceWords("cat", sentenceToFix, "dog");
+      testCase.SetIgnoreCaseTrue(true);
+      string[] sentenceArray = testCase.MakeSentenceArray();
+      string fixedSentence = testCase.Replace(sentenceArray);
+      Assert.AreEqual(testFixedSentence, fixedSentence);
+    }
 
   }
 }

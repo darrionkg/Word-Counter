@@ -6,6 +6,8 @@ namespace WordCounter
     private string _sentence;
     private string _replacementWord;
     private bool _replacePartialWord;
+    private bool _ignoreCase;
+    private bool _useWildCard
 
     public ReplaceWords(string word, string sentence, string replacementWord)
     {
@@ -13,6 +15,8 @@ namespace WordCounter
       _sentence = sentence;
       _replacementWord = replacementWord;
       _replacePartialWord = false;
+      _ignoreCase = false;
+      _useWildCard = false;
     }
 
     public string GetSentence()
@@ -23,6 +27,19 @@ namespace WordCounter
     public void SetReplacePartialWordTrue(bool partialWordTrue)
     {
       _replacePartialWord = partialWordTrue;
+    }
+
+    public void SetUseWildCard(bool wildCardTrue)
+    {
+      _useWildCard = wildCardTrue;
+    }
+
+    public void SetIgnoreCaseTrue(bool ignoreCaseTrue)
+    {
+      _word = _word.ToLower();
+      _sentence = _sentence.ToLower();
+      _replacementWord = _replacementWord.ToLower();
+      _ignoreCase = ignoreCaseTrue;
     }
 
     public string[] MakeSentenceArray()
@@ -62,5 +79,37 @@ namespace WordCounter
       string newSentence = _sentence.Replace(_word, _replacementWord);
       return newSentence;
     }
+
+    // public string UsingWildcard(string[] newSentenceArray)
+    // {
+    //
+    //   for(int i = 0; i < newSentenceArray.Length; i++) {
+    //     char[] charArrayOfWord = newSentenceArray.ToCharArray();
+    //     //newSentenceArray.IndexOf("*")
+    //     for(int i = 0; i < charArrayOfWord.Length; i++) {
+    //       if(charArrayOfWord[i] == '*') {
+    //         correspondingLetter = FindMissingLetter(charArrayOfWord)
+    //         newSentenceArray[i] = newSentenceArray.Replace("*", correspondingLetter);
+    //       }
+    //     }
+    //     } else {
+    //       continue;
+    //     }
+    // }
+    //
+    // public char = findMissingLetter(char[] charArrayOfWord)
+    // {
+    //   string foundLetters = "";
+    //   for(int i = 0; i < charArrayOfWord.Length; i++) {
+    //     for(int j = 0; j < _word.Length; j++) {
+    //       // might have to convert _word to string?
+    //       if(charArrayOfWord[i] == _word[j]) {
+    //         foundLetters += _word[j];
+    //       }
+    //
+    //
+    //     }
+    //   }
+    // }
   }
 }
