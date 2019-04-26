@@ -28,6 +28,13 @@ namespace WordCounter
       return sentenceArray;
     }
 
+    public int CheckForMatches(string[] sentenceArray)
+    {
+      int matches = 0;
+
+      return matches;
+    }
+
     // public int CheckForMatches(char[] wordArray, char[] sentenceArray)
     // {
     //   int matches = 0;

@@ -18,7 +18,7 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void MakeSentenceArray_MakesSentenceStringAnArray_Array()
+    public void MakeSentenceArray_MakesSentenceStringAnArray_StringArray()
     {
       ReplaceWords testCase = new ReplaceWords("word", "the cat");
       string[] sentenceArray = testCase.MakeSentenceArray();
@@ -26,14 +26,13 @@ namespace WordCounter.Tests
       CollectionAssert.AreEqual(sentenceArray, testArray);
     }
 
-    // [TestMethod]
-    // public void CheckForMatches_ChecksForNoMatchAndReturnOriginal_string()
-    // {
-    //   ReplaceWords testCase = new ReplaceWords("word", "the cat");
-    //   char[] wordArray = testCase.MakeWordArray();
-    //   char[] sentenceArray = testCase.MakeSentenceArray();
-    //   int numOfMatches = testCase.CheckForMatches(wordArray, sentenceArray);
-    //   Assert.AreEqual(numOfMatches, 0);
-    // }
+    [TestMethod]
+    public void CheckForMatches_ChecksForNoMatchAndReturnOriginal_string()
+    {
+      ReplaceWords testCase = new ReplaceWords("word", "the cat");
+      string[] sentenceArray = testCase.MakeSentenceArray();
+      int numOfMatches = testCase.CheckForMatches(sentenceArray);
+      Assert.AreEqual(numOfMatches, 0);
+    }
   }
 }
