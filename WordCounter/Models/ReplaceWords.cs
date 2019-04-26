@@ -5,17 +5,24 @@ namespace WordCounter
     private string _word;
     private string _sentence;
     private string _replacementWord;
+    private bool _replacePartialWord;
 
     public ReplaceWords(string word, string sentence, string replacementWord)
     {
       _word = word;
       _sentence = sentence;
       _replacementWord = replacementWord;
+      _replacePartialWord = false;
     }
 
     public string GetSentence()
     {
       return _sentence;
+    }
+
+    public void SetReplacePartialWordTrue(bool partialWordTrue)
+    {
+      _replacePartialWord = partialWordTrue;
     }
 
     public string[] MakeSentenceArray()
@@ -50,6 +57,10 @@ namespace WordCounter
       return newSentenceString;
     }
 
-
+    public string ReplacePartialWord()
+    {
+      string newSentence = _sentence.Replace(_word, _replacementWord);
+      return newSentence;
+    }
   }
 }

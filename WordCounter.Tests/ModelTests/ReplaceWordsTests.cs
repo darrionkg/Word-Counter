@@ -66,5 +66,18 @@ namespace WordCounter.Tests
       Assert.AreEqual(testFixedSentence, fixedSentence);
     }
 
+    [TestMethod]
+    public void ReplacePartialWord_ReplacesPartsOfStrings_string()
+    {
+      string sentenceToFix = "The cat barked at the cathedral";
+      string testFixedSentence = "The dog barked at the doghedral";
+      ReplaceWords testCase = new ReplaceWords("cat", sentenceToFix, "dog");
+      // this setter will be used for UI logic to determine how the user would like to replace the word
+      testCase.SetReplacePartialWordTrue(true);
+      string fixedSentence = testCase.ReplacePartialWord();
+      Assert.AreEqual(testFixedSentence, fixedSentence);
+    }
+
+
   }
 }
