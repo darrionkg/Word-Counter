@@ -80,6 +80,7 @@ namespace WordCounter
       return newSentence;
     }
 
+    // IGNORE ALL OF THIS. HAVENT FIGURED IT OUT YET. LEFT BECAUSE IT"S A 2 WEEK PROJECT
     // public string UsingWildcard(string[] newSentenceArray)
     // {
     //
