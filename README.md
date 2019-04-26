@@ -1,6 +1,6 @@
 # _Word Counter_
 
-#### _Word Counter_, April 26th, 2019_
+#### _Word Counter_, April 26th, 2019
 
 #### By _**Darrion Gering**_
 
@@ -38,4 +38,4 @@ C#, .NET
 
 MIT
 
-Copyright (c) 2019
+**Copyright (c) Darrion Gering 2019**

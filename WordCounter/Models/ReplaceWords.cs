@@ -7,7 +7,7 @@ namespace WordCounter
     private string _replacementWord;
     private bool _replacePartialWord;
     private bool _ignoreCase;
-    private bool _useWildCard
+    private bool _useWildCard;
 
     public ReplaceWords(string word, string sentence, string replacementWord)
     {
