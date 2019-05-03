@@ -8,6 +8,7 @@ namespace WordCounter.Models
     private bool _replacePartialWord;
     private bool _ignoreCase;
     private bool _useWildCard;
+    private string[] _sentenceArray;
 
     public ReplaceWords(string word, string sentence, string replacementWord)
     {
@@ -17,11 +18,22 @@ namespace WordCounter.Models
       _replacePartialWord = false;
       _ignoreCase = false;
       _useWildCard = false;
+      _sentenceArray = sentence.Split(' ');
     }
 
     public string GetSentence()
     {
       return _sentence;
+    }
+
+    public string[] GetSentenceArray()
+    {
+      return _sentenceArray;
+    }
+
+    public void SetSentenceArray(string[] sentenceArray)
+    {
+      _sentenceArray = sentenceArray;
     }
 
     public void SetReplacePartialWordTrue(bool partialWordTrue)
@@ -38,21 +50,18 @@ namespace WordCounter.Models
     {
       _word = _word.ToLower();
       _sentence = _sentence.ToLower();
+      for(int i = 0; i < _sentenceArray.Length; i++) {
+        _sentenceArray[i] = _sentenceArray[i].ToLower();
+      }
       _replacementWord = _replacementWord.ToLower();
       _ignoreCase = ignoreCaseTrue;
     }
 
-    public string[] MakeSentenceArray()
-    {
-      string[] sentenceArray = _sentence.Split(' ');
-      return sentenceArray;
-    }
-
-    public int CheckForMatches(string[] sentenceArray)
+    public int CheckForMatches()
     {
       int matches = 0;
-      for(int i = 0; i < sentenceArray.Length; i++) {
-        if(sentenceArray[i] == _word) {
+      for(int i = 0; i < _sentenceArray.Length; i++) {
+        if(_sentenceArray[i] == _word) {
           matches++;
         } else {
           continue;
@@ -61,16 +70,16 @@ namespace WordCounter.Models
       return matches;
     }
 
-    public string Replace(string[] newSentenceArray)
+    public string Replace()
     {
-      for(int i = 0; i < newSentenceArray.Length; i++) {
-        if(newSentenceArray[i] == _word) {
-          newSentenceArray[i] = _replacementWord;
+      for(int i = 0; i < _sentenceArray.Length; i++) {
+        if(_sentenceArray[i] == _word) {
+          _sentenceArray[i] = _replacementWord;
         } else {
           continue;
         }
       }
-      string newSentenceString = string.Join(" ", newSentenceArray);
+      string newSentenceString = string.Join(" ", _sentenceArray);
       return newSentenceString;
     }
 

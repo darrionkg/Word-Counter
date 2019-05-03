@@ -26,6 +26,7 @@ namespace WordCounter.Controllers
     [HttpGet("/game/results")]
     public ActionResult Show()
     {
+
       return View();
     }
   }

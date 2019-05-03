@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WordCounter;
+using WordCounter.Models;
 using System;
 using System.Collections.Generic;
 
@@ -21,17 +21,15 @@ namespace WordCounter.Tests
     public void MakeSentenceArray_MakesSentenceStringAnArray_StringArray()
     {
       ReplaceWords testCase = new ReplaceWords("word", "the cat", "dog");
-      string[] sentenceArray = testCase.MakeSentenceArray();
       string[] testArray = {"the", "cat"};
-      CollectionAssert.AreEqual(sentenceArray, testArray);
+      CollectionAssert.AreEqual(testCase.GetSentenceArray(), testArray);
     }
 
     [TestMethod]
     public void CheckForMatches_ChecksForNoMatchAndReturnOriginal_int()
     {
       ReplaceWords testCase = new ReplaceWords("word", "the cat", "dog");
-      string[] sentenceArray = testCase.MakeSentenceArray();
-      int numOfMatches = testCase.CheckForMatches(sentenceArray);
+      int numOfMatches = testCase.CheckForMatches();
       Assert.AreEqual(numOfMatches, 0);
     }
 
@@ -39,8 +37,7 @@ namespace WordCounter.Tests
     public void CheckForMatches_ChecksForOneWordMatch_int()
     {
       ReplaceWords testCase = new ReplaceWords("cat", "the cat", "dog");
-      string[] sentenceArray = testCase.MakeSentenceArray();
-      int numOfMatches = testCase.CheckForMatches(sentenceArray);
+      int numOfMatches = testCase.CheckForMatches();
       Assert.AreEqual(numOfMatches, 1);
     }
 
@@ -50,8 +47,7 @@ namespace WordCounter.Tests
       // bug with comma in sentence
       string longSentence = "the cat Meatball met another cat and became best friends with the cat even though he was an ally cat it didn't matter because he was a good cat friend";
       ReplaceWords testCase = new ReplaceWords("cat", longSentence, "dog");
-      string[] sentenceArray = testCase.MakeSentenceArray();
-      int numOfMatches = testCase.CheckForMatches(sentenceArray);
+      int numOfMatches = testCase.CheckForMatches();
       Assert.AreEqual(numOfMatches, 5);
     }
 
@@ -61,8 +57,7 @@ namespace WordCounter.Tests
       string sentenceToFix = "The cat barked at the cathedral";
       string testFixedSentence = "The dog barked at the cathedral";
       ReplaceWords testCase = new ReplaceWords("cat", sentenceToFix, "dog");
-      string[] sentenceArray = testCase.MakeSentenceArray();
-      string fixedSentence = testCase.Replace(sentenceArray);
+      string fixedSentence = testCase.Replace();
       Assert.AreEqual(testFixedSentence, fixedSentence);
     }
 
@@ -85,8 +80,7 @@ namespace WordCounter.Tests
       string testFixedSentence = "the dog barked at the cathedral";
       ReplaceWords testCase = new ReplaceWords("cat", sentenceToFix, "dog");
       testCase.SetIgnoreCaseTrue(true);
-      string[] sentenceArray = testCase.MakeSentenceArray();
-      string fixedSentence = testCase.Replace(sentenceArray);
+      string fixedSentence = testCase.Replace();
       Assert.AreEqual(testFixedSentence, fixedSentence);
     }
 

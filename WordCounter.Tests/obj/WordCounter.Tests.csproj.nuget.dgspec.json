@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter.Tests\\WordCounter.Tests.csproj": {}
+    "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter.Tests\\WordCounter.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter.Tests\\WordCounter.Tests.csproj": {
+    "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter.Tests\\WordCounter.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter.Tests\\WordCounter.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter.Tests\\WordCounter.Tests.csproj",
         "projectName": "WordCounter.Tests",
-        "projectPath": "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter.Tests\\WordCounter.Tests.csproj",
+        "projectPath": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter.Tests\\WordCounter.Tests.csproj",
         "packagesPath": "C:\\Users\\darri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter.Tests\\obj\\",
+        "outputPath": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -23,17 +23,17 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj": {
-                "projectPath": "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj"
+              "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj": {
+                "projectPath": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj"
               }
             }
           }
@@ -45,7 +45,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
+        "netcoreapp2.2": {
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
@@ -62,7 +62,7 @@
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.0, )",
+              "version": "[2.2.0, )",
               "autoReferenced": true
             }
           },
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj": {
+    "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj",
+        "projectUniqueName": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj",
         "projectName": "WordCounter",
-        "projectPath": "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj",
+        "projectPath": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj",
         "packagesPath": "C:\\Users\\darri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\darri\\desktop\\WordCounter.Solution\\WordCounter\\obj\\",
+        "outputPath": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -93,14 +93,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp2.2": {
             "projectReferences": {}
           }
         },
@@ -111,12 +111,27 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
+        "netcoreapp2.2": {
           "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.0, )",
+              "version": "[2.2.0, )",
               "autoReferenced": true
             }
           },
