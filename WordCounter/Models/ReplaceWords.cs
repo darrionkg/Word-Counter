@@ -1,4 +1,4 @@
-namespace WordCounter
+namespace WordCounter.Models
 {
   public class ReplaceWords
   {
