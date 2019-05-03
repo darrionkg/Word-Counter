@@ -22,3 +22,6 @@ C:\Users\darri\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\
 C:\Users\darri\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.dll
 C:\Users\darri\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.pdb
 C:\Users\darri\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.csproj.CopyComplete
+C:\Users\darri\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\Razor\Views\ReplaceWords\DeleteAll.g.cshtml.cs
+C:\Users\darri\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\Razor\Views\ReplaceWords\New.g.cshtml.cs
+C:\Users\darri\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp2.2\Razor\Views\ReplaceWords\Show.g.cshtml.cs
