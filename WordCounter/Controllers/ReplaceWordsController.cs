@@ -19,8 +19,14 @@ namespace WordCounter.Controllers
     [HttpPost("/game")]
     public ActionResult Create(string word, string sentence, string replacementWord)
     {
-      ReplaceWords newReplacement = new ReplaceWords(word, sentence, replacementWord);
-      return View("Show", newReplacement);
+      ReplaceWords model = new ReplaceWords(word, sentence, replacementWord);
+      return View("Show", model);
+    }
+
+    [HttpGet("/game/results")]
+    public ActionResult Show()
+    {
+      return View();
     }
   }
 }
