@@ -5,8 +5,8 @@ namespace WordCounter.Models
     private string _word;
     private string _sentence;
     private string _replacementWord;
-    static private bool _replacePartialWord;
-    static private bool _ignoreCase;
+    private bool _replacePartialWord;
+    private bool _ignoreCase;
     private bool _useWildCard;
     private string[] _sentenceArray;
 
@@ -88,38 +88,5 @@ namespace WordCounter.Models
       string newSentence = _sentence.Replace(_word, _replacementWord);
       return newSentence;
     }
-
-    // IGNORE ALL OF THIS. HAVENT FIGURED IT OUT YET. LEFT BECAUSE IT"S A 2 WEEK PROJECT
-    // public string UsingWildcard(string[] newSentenceArray)
-    // {
-    //
-    //   for(int i = 0; i < newSentenceArray.Length; i++) {
-    //     char[] charArrayOfWord = newSentenceArray.ToCharArray();
-    //     //newSentenceArray.IndexOf("*")
-    //     for(int i = 0; i < charArrayOfWord.Length; i++) {
-    //       if(charArrayOfWord[i] == '*') {
-    //         correspondingLetter = FindMissingLetter(charArrayOfWord)
-    //         newSentenceArray[i] = newSentenceArray.Replace("*", correspondingLetter);
-    //       }
-    //     }
-    //     } else {
-    //       continue;
-    //     }
-    // }
-    //
-    // public char = findMissingLetter(char[] charArrayOfWord)
-    // {
-    //   string foundLetters = "";
-    //   for(int i = 0; i < charArrayOfWord.Length; i++) {
-    //     for(int j = 0; j < _word.Length; j++) {
-    //       // might have to convert _word to string?
-    //       if(charArrayOfWord[i] == _word[j]) {
-    //         foundLetters += _word[j];
-    //       }
-    //
-    //
-    //     }
-    //   }
-    // }
   }
 }

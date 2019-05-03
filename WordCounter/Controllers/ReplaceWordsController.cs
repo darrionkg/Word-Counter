@@ -8,8 +8,6 @@ namespace WordCounter.Controllers
   public class ReplaceWordsController : Controller
   {
 
-    // "/game" - Homescreen wit special options buttons
-
     [HttpGet("/game/new")]
     public ActionResult New()
     {
@@ -26,7 +24,6 @@ namespace WordCounter.Controllers
     [HttpGet("/game/results")]
     public ActionResult Show()
     {
-
       return View();
     }
   }

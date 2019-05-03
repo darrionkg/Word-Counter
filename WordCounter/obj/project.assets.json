@@ -12073,33 +12073,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\darri\\.nuget\\packages\\": {},
-    "C:\\ProgramData\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/darrionkg/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj",
+      "projectUniqueName": "/Users/darrionkg/Desktop/Dev/Word-Counter/WordCounter/WordCounter.csproj",
       "projectName": "WordCounter",
-      "projectPath": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj",
-      "packagesPath": "C:\\Users\\darri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\darri\\Desktop\\WordCounter.Solution\\WordCounter\\obj\\",
+      "projectPath": "/Users/darrionkg/Desktop/Dev/Word-Counter/WordCounter/WordCounter.csproj",
+      "packagesPath": "/Users/darrionkg/.nuget/packages/",
+      "outputPath": "/Users/darrionkg/Desktop/Dev/Word-Counter/WordCounter/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\ProgramData\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\darri\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/darrionkg/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
