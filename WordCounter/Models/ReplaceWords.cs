@@ -5,8 +5,8 @@ namespace WordCounter.Models
     private string _word;
     private string _sentence;
     private string _replacementWord;
-    private bool _replacePartialWord;
-    private bool _ignoreCase;
+    static private bool _replacePartialWord;
+    static private bool _ignoreCase;
     private bool _useWildCard;
     private string[] _sentenceArray;
 
