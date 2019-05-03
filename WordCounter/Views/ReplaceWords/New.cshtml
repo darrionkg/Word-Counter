@@ -1,11 +1,22 @@
-<h1>Add a new sentence, word, and replacement word:</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset='utf-8'>
+    <title>Word Counter</title>
+  </head>
+  <body>
+    <h1>Add a new sentence, word, and replacement word:</h1>
 
-<form action='/game' method='post'>
-  <label for='sentence'>Sentence:</label>
-  <input id='sentence' name='sentence' type='text'>
-  <label for='word'>Word To Replace:</label>
-  <input id='word' name='word' type='text'>
-  <label for='replacementWord'>Replacement Word:</label>
-  <input id='replacementWord' name='replacementWord' type='text'>
-  <button type='submit'>Add</button>
-</form>
+    <form action='/game' method='post'>
+      <label for='sentence'>Sentence:</label>
+      <input id='sentence' name='sentence' type='text'>
+      <label for='word'>Word To Replace:</label>
+      <input id='word' name='word' type='text'>
+      <label for='replacementWord'>Replacement Word:</label>
+      <input id='replacementWord' name='replacementWord' type='text'>
+      <button type='submit'>Add</button>
+    </form>
+  </body>
+</html>

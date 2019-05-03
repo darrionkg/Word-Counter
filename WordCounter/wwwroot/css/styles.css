@@ -1,0 +1,11 @@
+html body{
+  background-color: #cfe0c0;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20%;
+  text-align: center;
+}
+
+body a {
+  color: red;
+}
