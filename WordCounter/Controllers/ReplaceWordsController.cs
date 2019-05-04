@@ -15,9 +15,15 @@ namespace WordCounter.Controllers
     }
 
     [HttpPost("/game")]
-    public ActionResult Create(string word, string sentence, string replacementWord)
+    public ActionResult Create(string word, string sentence, string replacementWord, bool ignoreCase, bool partialWord)
     {
       ReplaceWords model = new ReplaceWords(word, sentence, replacementWord);
+      if(ignoreCase == true) {
+        model.SetIgnoreCaseTrue(true);
+      }
+      if(partialWord == true) {
+        model.SetReplacePartialWordTrue(true);
+      }
       return View("Show", model);
     }
 

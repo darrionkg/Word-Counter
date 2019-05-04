@@ -8,15 +8,30 @@
   </head>
   <body>
     <h1>Add a new sentence, word, and replacement word:</h1>
-
     <form action='/game' method='post'>
-      <label for='sentence'>Sentence:</label>
-      <input id='sentence' name='sentence' type='text'>
-      <label for='word'>Word To Replace:</label>
-      <input id='word' name='word' type='text'>
-      <label for='replacementWord'>Replacement Word:</label>
-      <input id='replacementWord' name='replacementWord' type='text'>
-      <button type='submit'>Add</button>
+      <div class="textInputs">
+        <label for='sentence'>Sentence:</label>
+        <input id='sentence' name='sentence' type='text'>
+        <label for='word'>Word To Replace:</label>
+        <input id='word' name='word' type='text'>
+        <label for='replacementWord'>Replacement Word:</label>
+        <input id='replacementWord' name='replacementWord' type='text'>
+        <button type='submit'>Submit</button>
+      </div>
+      <br>
+      <div class="checkboxInputs">
+        <h6>Ignore Case</h6>
+      <label class="switch">
+        <input id="ignoreCase" name="ignoreCase" type="checkbox" value="true">
+        <span class="slider round"></span>
+      </label>
+      <h6>Search Parts of Words</h6>
+      <label class="switch">
+        <input id="partialWord" name="partialWord" type="checkbox" value="true">
+        <span class="slider round"></span>
+      </label>
+      </div>
     </form>
+
   </body>
 </html>
